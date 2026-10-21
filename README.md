@@ -38,11 +38,11 @@ The testbench includes:
 
 ## Simulation Waveform
 
-![ALU Simulation Waveform](screenshots/alu_waveform.png)
+![ALU Simulation Waveform](alu_waveform.png)
 
 ## Synthesized Schematic
 
-![ALU Synthesized Schematic](screenshots/alu_synthesized_schematic.png)
+![ALU Synthesized Schematic](alu_synthesized_schematic.png)
 
 ## Tools
 - Verilog HDL
