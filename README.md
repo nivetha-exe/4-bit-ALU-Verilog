@@ -1,6 +1,6 @@
 # 4-bit ALU using Verilog
 
-This is a simple 4-bit ALU designed using Verilog HDL in Xilinx Vivado.
+This is a 4-bit Arithmetic Logic Unit (ALU) designed using Verilog HDL in Xilinx Vivado 2026.1.
 
 ## Operations
 
@@ -26,20 +26,30 @@ This is a simple 4-bit ALU designed using Verilog HDL in Xilinx Vivado.
 
 ## Verification
 
-I created a Verilog testbench and tested the ALU using Vivado Simulator.
+I created a Verilog testbench (`alu_4bit_tb.v`) and tested the ALU using Vivado Simulator.
 
-Some of the tests include:
+The testbench includes:
 - 3 + 2 = 5
 - 7 - 3 = 4
 - AND, OR and XOR operations
+- NOT operation
+- Left and right shift operations
 - 15 + 1 → result = 0, carry = 1
 
+## Simulation Waveform
+
+![ALU Simulation Waveform](screenshots/alu_waveform.png)
+
+## Synthesized Schematic
+
+![ALU Synthesized Schematic](screenshots/alu_synthesized_schematic.png)
+
 ## Tools
-- Verilog
-- Xilinx Vivado
-- Vivado Simulator
+- Verilog HDL
+- Xilinx Vivado 2026.1
+- Vivado Simulator (XSim)
 
 ## FPGA
 Target device: Artix-7 (`xc7a35tftg256-1`)
 
-This project was made without a physical FPGA board, so the design was tested through simulation and Vivado implementation.
+This project was developed and tested through simulation and the Vivado implementation flow without a physical FPGA board.
