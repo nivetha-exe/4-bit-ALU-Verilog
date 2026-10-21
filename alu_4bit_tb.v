@@ -1,3 +1,4 @@
+
 `timescale 1ns / 1ps
 
 module alu_4bit_tb;
@@ -48,11 +49,31 @@ module alu_4bit_tb;
         B = 4'b1010;
         op = 3'b100;
         #10;
-// Carry test: 15 + 1 = 16
-A = 4'b1111;
-B = 4'b0001;
-op = 3'b000;
-#10;
+
+        // Carry test: 15 + 1 = 16
+        A = 4'b1111;
+        B = 4'b0001;
+        op = 3'b000;
+        #10;
+
+        // NOT: ~1010 = 0101
+        A = 4'b1010;
+        B = 4'b0000;
+        op = 3'b101;
+        #10;
+
+        // Left shift: 0011 << 1 = 0110
+        A = 4'b0011;
+        B = 4'b0000;
+        op = 3'b110;
+        #10;
+
+        // Right shift: 1000 >> 1 = 0100
+        A = 4'b1000;
+        B = 4'b0000;
+        op = 3'b111;
+        #10;
+
         $finish;
     end
 
